@@ -8,9 +8,12 @@ let pizzaJson = [
     {id:7, name:'Chocolate', img:'images/pizza7.png', price:22.36, sizes:['320g', '530g', '860g'], description:'Descrição da pizza em mais de uma linha muito legal bem interessante'}
 ];
 
-pizzaJson.map((item, index) => {
-    let.pizzaItem = document.querySelector('.models .pizzaitem').cloneNode(true);
+const c = (el) => document.querySelector(el);
+const cs = (el) => document.querySelectorAll(el);
+
+pizzaJson.map((item, index)=>{
+    let pizzaItem = c('.models .pizzaItem').cloneNode(true);
     //preencher as info pizza item
 
-    document.querySelector('.pizza-area').append( pizzaItem );
+    c('.pizza-area').append(pizzaItem);
 });
