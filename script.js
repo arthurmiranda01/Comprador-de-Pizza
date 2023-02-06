@@ -13,7 +13,8 @@ const cs = (el) => document.querySelectorAll(el);
 
 pizzaJson.map((item, index)=>{
     let pizzaItem = c('.models .pizzaItem').cloneNode(true);
-    //preencher as info pizza item
+
+    pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
 
     c('.pizza-area').append(pizzaItem);
 });
